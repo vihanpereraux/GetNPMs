@@ -14,10 +14,25 @@ document.getElementById('searchInput').addEventListener('input', function (event
             data.objects.forEach(item => {
                 const packageDiv = document.createElement('div');
                 packageDiv.className = 'package';
-                packageDiv.textContent = item.package.name;
-                packageDiv.addEventListener('click', () => {
-                    alert(`Selected: ${item.package.name}\nDescription: ${item.package.description}`);
-                });
+
+                // name
+                const nameDiv = document.createElement('div');
+                nameDiv.className = 'name';
+                nameDiv.textContent = 'npm i ' + item.package.name;
+                packageDiv.appendChild(nameDiv);
+
+                // description
+                const descriptionDiv = document.createElement('div');
+                descriptionDiv.className = 'description';
+                descriptionDiv.textContent = item.package.description;
+                packageDiv.appendChild(descriptionDiv);
+
+                // downlaods
+                const downloadsDiv = document.createElement('div');
+                downloadsDiv.className = 'downlaods';
+                downloadsDiv.textContent = item.downloads.weekly + ' weekly downloads';
+                packageDiv.appendChild(downloadsDiv);
+
                 resultsDiv.appendChild(packageDiv);
             });
         })
@@ -25,3 +40,4 @@ document.getElementById('searchInput').addEventListener('input', function (event
             console.error('Error fetching data:', error);
         });
 });
+
