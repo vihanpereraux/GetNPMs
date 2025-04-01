@@ -33,6 +33,33 @@ document.getElementById('searchInput').addEventListener('input', function (event
                 downloadsDiv.textContent = item.downloads.weekly + ' weekly downloads';
                 packageDiv.appendChild(downloadsDiv);
 
+                // visit npm site
+                const npmLogoWrapper = document.createElement('a');
+                npmLogoWrapper.className = 'explore';
+                // npm site link
+                const npmLogoImg = document.createElement('img');
+                npmLogoImg.src = "https://img.shields.io/badge/Explore%20on%20NPM-CC3534?style=flat&logo=npm&logoColor=white";
+                npmLogoImg.alt = "Explore on NPM";
+                npmLogoWrapper.appendChild(npmLogoImg);
+                npmLogoWrapper.style.textDecoration = 'none';
+                npmLogoWrapper.href = item.package.links.npm;
+                npmLogoWrapper.target = '_blank';
+                packageDiv.appendChild(npmLogoWrapper);
+
+                // visit github repository
+                const ghLogoWrapper = document.createElement('a');
+                ghLogoWrapper.className = 'explore';
+                ghLogoWrapper.style.marginLeft = '5px';
+                // github repository link
+                const ghLogoImg = document.createElement('img');
+                ghLogoImg.src = "https://img.shields.io/badge/Explore%20on%20GitHub-181717?style=flat&logo=github&logoColor=white";
+                ghLogoImg.alt = "Explore on GitHub";
+                ghLogoWrapper.appendChild(ghLogoImg);
+                ghLogoWrapper.style.textDecoration = 'none';
+                ghLogoWrapper.href = item.package.links.repository;
+                ghLogoWrapper.target = '_blank';
+                packageDiv.appendChild(ghLogoWrapper);
+
                 resultsDiv.appendChild(packageDiv);
             });
         })
