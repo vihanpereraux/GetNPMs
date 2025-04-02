@@ -2,6 +2,8 @@
 
 A simple self-hosted Firefox extension that lets you search for NPM packages in real time directly from your browser.
 
+**Official Website**: [https://yt-cc.vercel.app/](https://list-npms.vercel.app/)
+
 <video src="https://list-npms.vercel.app/preview.mp4" 
 autoPlay controls width="600">
     Your browser does not support the video tag.
