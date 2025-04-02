@@ -2,7 +2,10 @@
 
 A simple self-hosted Firefox extension that lets you search for NPM packages in real time directly from your browser.
 
-![Extension Preview](/public/preview.mp4)
+<video src="https://list-npms.vercel.app/preview.mp4" 
+autoPlay controls width="600">
+    Your browser does not support the video tag.
+</video>
 
 ## Features
 
@@ -14,9 +17,22 @@ A simple self-hosted Firefox extension that lets you search for NPM packages in 
 
 ## Installation
 
-Install the extension directly from the Firefox Add-ons store:
+To use the extension locally in Firefox:
 
-[![Get the Extension](https://img.shields.io/badge/Firefox-Add%20to%20Browser-FF7139?style=for-the-badge&logo=firefox-browser)](https://addons.mozilla.org/en-US/firefox/addon/npm-search/)
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/vihanpereraux/List-NPMs.git
+    ```
+
+2. Open Firefox and navigate to `about:debugging`.
+
+3. Click on **This Firefox** in the sidebar.
+
+4. Click on **Load Temporary Add-on**.
+
+5. Select the `manifest.json` file from the cloned repository.
+
+The extension will now be loaded temporarily and can be used for testing. Note that it will be removed when you restart Firefox.
 
 ## Usage
 
@@ -37,10 +53,8 @@ git clone https://github.com/vihanpereraux/List-NPMs.git
 2. Follow the development setup in the extension repository
 
 ## Links
-
-- [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/npm-search/)
 - [GitHub Repository](https://github.com/vihanpereraux/List-NPMs)
 
 ## License
 
-Copyright © 2024 NPM Search Extension. All rights reserved.
+Copyright © 2025 List NPMs extension. All rights reserved.
